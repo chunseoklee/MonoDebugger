@@ -10,7 +10,7 @@ namespace MonoDebugger.VS2013.MonoClient
     {
         public async Task<MonoServerInformation> SearchServer(CancellationToken token)
         {
-            using (var udp = new UdpClient(new IPEndPoint(IPAddress.Any, 15000)))
+            using (var udp = new UdpClient(new IPEndPoint(IPAddress.Any, 16000)))
             {
                 Task result = await Task.WhenAny(udp.ReceiveAsync(), Task.Delay(500, token));
                 var task = result as Task<UdpReceiveResult>;

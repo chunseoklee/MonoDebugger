@@ -66,7 +66,7 @@ namespace MonoDebugger.SharedLib.Server
                     logger.Trace("Start announcing");
                     using (var client = new UdpClient())
                     {
-                        var ip = new IPEndPoint(IPAddress.Broadcast, 15000);
+                        var ip = new IPEndPoint(IPAddress.Broadcast, 16000);
                         client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, true);
 
                         while (true)
